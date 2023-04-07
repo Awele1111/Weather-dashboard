@@ -407,13 +407,14 @@ main{
 
   *{
     box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
     
 }
 
 body {
     
     font-size: 16px;
-    font-family:  sans-serif, Verdana, Geneva, Tahoma,;
+    font-family:  'sans-serif', Verdana, 'Geneva', 'Tahoma',;
     
 }
 h3{
