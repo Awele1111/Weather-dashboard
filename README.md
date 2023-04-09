@@ -13,9 +13,12 @@
 My goal & motivation is to build a weather dashboard application with form inputs utilizaing a third party API (OpenWeatherMap)  to generatate a five-day weather forecast that retrieves weather data for cities. I also utilized localStorage to store persistent data. 
 Attached below are screenshots of my deployed weather dashboard website. 
 
-![weatherReport](assets/Readme1.png)
 
-![weatherReport](assets/Readme2.png)
+![weather](assets/Readme1.png)
+
+![weather](assets/Readme2.png)
+
+
 
 
 
