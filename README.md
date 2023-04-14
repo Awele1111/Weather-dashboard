@@ -14,9 +14,13 @@ My goal & motivation is to build a weather dashboard application with form input
 Attached below are screenshots of my deployed weather dashboard website. 
 
 
-![weather](assets/Readme1.png)
+![weather](assets/images/weather1.png)
+![weather](assets/images/weather2.png)
+![weather](assets/images/weather3.png)
+![weather](assets/images/weather4.png)
 
-![weather](assets/Readme2.png)
+
+
 
 
 
