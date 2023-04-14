@@ -1,109 +1,128 @@
-<!DOCTYPE html>
+ <!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Weather Dashboard by Awele</title>
-    <!--Bootstrap CSS CDN-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
-    <!-- Font Awesome CSS Icons (For nice glyphicons) -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <!--Jumbotron for Title-->
-    <div class="jumbotron container-fluid mt-2 text-center p-2" style="background-color:rgb(95, 129, 164);color: rgb(230, 213, 213);">
-        <h1> <strong>Weather Dashboard</strong></h1>
-    </div>
-    <div class="container">
-        <!--Row for searching a city-->
-        <div class="row">
-            <div class="col-sm-4 bg-light">
-                <!--Here we create an HTML form for handling the inputs-->
-                <h4 class="pt-1"><strong>Search for a City:</strong></h4>
-                <!--Here we create the text box for capturing the search city Name-->
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control"id="search-city" aria-label="City Search" aria-describedby="search-button">
-                    <div class="input-group-append">
-                        <button class=" btn bg-primary text-light" id="search-button"><i class="fa fa-search"></i></button>
-                    </div>
+    <div class="weather">
+        <input type="search" list="autosuggestions" class="weather-search" placeholder="Type a city here and press enter/return">
+        <datalist id="autosuggestions">
+             <-- <option value="Lagos"></option>
+            <option value="Chicago"></option>   -->
+         <!-- </datalist>
+        <div class="weather_today">
+            <div class="weather-details">
+                <h2 class="weather_city">City</h2>
+                <p class="weather_day">Day</p>
+                <div class="weather_current">
+                    <p class="weather_indicator weather_indicator--humidity">Humidity: <span class="value"> </span></p>
+                    <p class="weather_indicator weather_indicator--wind">Wind speed: <span class="value"> </span></p>
+                    <p class="weather_indicator weather_indicator--pressure">Pressure: <span class="value"> </span></p>
                 </div>
-                <!--section for search city history-->
-                <button class=" btn btn-primary" type="button" id="clear-history">Clear history</button>
-                <ul class="list-group">
-
-                </ul>
-            </div>   
-            <div class="col-sm-8">
-                <div class="row ml-2 border border-dark rounded">
-                    <div class="col-sm-12" id="current-weather">
-                        <h3 class="city-name mb-1 mt-2 bolder" id="current-city"></h3>
-                        <p>Temperature:<span class="current" id="temperature"></span></p>
-                        <p>Humidity:<span class="current" id="humidity"></span></p> 
-                        <p>Wind Speed:<span class="current" id="wind-speed"></span></p>
-                        <p>UV index:<span class="current bg-danger rounded py-2 px-2 text-white" id="uv-index"></span></p> 
-                    </div>
-                </div>
-                <!--Row for future data to be dumped here-->
-                <div class="col-sm-12" id ="future-weather">
-                    <h3>5-Day Forecast:</h3>
-                    <div class="row text-light">
-                        <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded" >
-                            <p id="fDate0"></p>
-                            <p id="fImg0"></p>
-                            <p>Temp:<span id="fTemp0"></span></p>
-                            <p>Humidity:<span id="fHumidity0"></span></p>
-                        </div>
-                        <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded" >
-                            <p id="fDate1"></p>
-                            <p id="fImg1"></p>
-                            <p>Temp:<span id="fTemp1"></span></p>
-                            <p>Humidity:<span id="fHumidity1"></span></p>
-                        </div>
-                        <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
-                            <p id="fDate2"></p>
-                            <p id="fImg2"></p>
-                            <p>Temp:<span id="fTemp2"></span></p>
-                            <p>Humidity:<span id="fHumidity2"></span></p>
-                        </div>
-                        <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
-                            <p id="fDate3"></p>
-                            <p id="fImg3"></p>
-                            <p>Temp:<span id="fTemp3"></span></p>
-                            <p>Humidity:<span id="fHumidity3"></span></p>
-                        </div>
-                        <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded" >
-                            <p id="fDate4"></p>
-                            <p id="fImg4"></p>
-                            <p>Temp:<span id="fTemp4"></span></p>
-                            <p>Humidity:<span id="fHumidity4"></span></p>
-                        </div>
-                    </div>
-                </div>
-                
             </div>
+            <img src="" alt="" class="weather_image">
+            <div class="weather_temperature">Temperature<span class="value"></span></div>
+            
+        </div>
+        <div class="weather_forecast">
+            <article class="weather_forecast_item">
+                <img src="" alt="" class="weather_forecast_icon">
+                <h3 class="weather_forecast_day">Day</h3>
+                <p class="weather_forecast_temperature"><span class="value">50</span>%</p>
+            </article>
+            <article class="weather_forecast_item">
+                <img src="" alt="" class="weather_forecast_icon">
+                <h3 class="weather_forecast_day">Day</h3>
+                <p class="weather_forecast_temperature"><span class="value">50</span>%</p>
+            </article>
+            <article class="weather_forecast_item">
+                <img src="" alt="" class="weather_forecast_icon">
+                <h3 class="weather_forecast_day">Day</h3>
+                <p class="weather_forecast_temperature"><span class="value">50</span>%</p>
+            </article>
+            <article class="weather_forecast_item">
+                <img src="" alt="" class="weather_forecast_icon">
+                <h3 class="weather_forecast_day">Day</h3>
+                <p class="weather_forecast_temperature"><span class="value">50</span>%</p>
+            </article>
+            <article class="weather_forecast_item">
+                <img src="" alt="" class="weather_forecast_icon">
+                <h3 class="weather_forecast_day">Day</h3>
+                <p class="weather_forecast_temperature"><span class="value">50</span>%</p>
+            </article>
+
         </div>
     </div>
-		<footer class="mt-5 p-3 text-center bg-light">
-			Weather Dashboard
-			<link
-				rel="stylesheet"
-				type="text/css"
-                href="https://code.ionicframework.com/ionicons/5.5.1/css/ionicons.min.css"
 
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>    --> 
 
-			/>
-			Made <i class="icon ion-heart"></i> By
-			<a href="https://github.com/awele1111" target="blank">
-				Awele</a
-			>
-		</footer>
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awele's Weather Dashboard</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div class="weather">
+        <input type="search" list="autosuggestions" class="search" placeholder="Type a city here and press enter/return">
+        <datalist id="autosuggestions">
+        </datalist>
+        <div class="weather_today">
+            <div class="weather-details">
+                <h2 class="city">City</h2>
+                <p class="day">Day</p>
+                <div class="weather_current">
+                    <p class="weather_indicator weather_indicator--humidity">Humidity: <span class="value"> </span></p>
+                    <p class="weather_indicator weather_indicator--wind">Wind speed: <span class="value"> </span></p>
+                    <p class="weather_indicator weather_indicator--pressure">Pressure: <span class="value"> </span></p>
+                </div>
+            </div>
+            <img src="" alt="" class="image">
+            <div class="temperature">Temperature: <span class="value"></span></div>
+            
+        </div>
+        <div class="weather_forecast">
+            <article class="weather_forecast_item">
+                <img src="" alt="" class="weather_forecast_icon">
+                <h3 class="weather_forecast_day">Day</h3>
+                <p class="weather_forecast_temperature"><span class="value"></span></p>
+            </article>
+            <article class="weather_forecast_item">
+                <img src="" alt="" class="weather_forecast_icon">
+                <h3 class="weather_forecast_day">Day</h3>
+                <p class="weather_forecast_temperature"><span class="value"></span></p>
+            </article>
+            <article class="weather_forecast_item">
+                <img src="" alt="" class="weather_forecast_icon">
+                <h3 class="weather_forecast_day">Day</h3>
+                <p class="weather_forecast_temperature"><span class="value"></span></p>
+            </article>
+            <article class="weather_forecast_item">
+                <img src="" alt="" class="weather_forecast_icon">
+                <h3 class="weather_forecast_day">Day</h3>
+                <p class="weather_forecast_temperature"><span class="value"></span></p>
+            </article>
+            <article class="weather_forecast_item">
+                <img src="" alt="" class="weather_forecast_icon">
+                <h3 class="weather_forecast_day">Day</h3>
+                <p class="weather_forecast_temperature"><span class="value"></span></p>
+            </article>
 
-    <!--jQuery JS-->
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
-    <!--Code to Jvascript File-->
-    <script src="script.js"></script>
+        </div>
+    </div>
+
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
+
+
+ 

@@ -25,7 +25,7 @@ Attached below are screenshots of my deployed weather dashboard website.
 
 ## Installation
 
-This page was accomplished with technologies such as Javascript, HTML & CSS. I also utilized bootstrap & jquery.
+This page was accomplished with technologies such as Javascript, HTML & CSS. I also utilized teleport to generate dropdwon of cities to create a more user-friendly application which users can click on to find weather for cities instead of a submit button..
 
 ## Usage
  Usage of my weather dashboard application is done when a user is able to search for a city, and they are presented with current and future conditions for that city and that city is added to the search history. 
